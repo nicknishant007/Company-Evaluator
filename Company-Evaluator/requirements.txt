@@ -1,0 +1,147 @@
+# ==========================
+# Core LLM Framework
+# ==========================
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+langchain-groq
+langsmith
+
+# ==========================
+# LangGraph
+# ==========================
+langgraph
+langgraph-checkpoint
+langgraph-sdk
+
+# ==========================
+# CrewAI
+# ==========================
+crewai
+crewai-tools
+
+# ==========================
+# Vector Databases
+# ==========================
+qdrant-client
+chromadb
+faiss-cpu
+
+# ==========================
+# Embedding Models
+# ==========================
+sentence-transformers
+transformers
+torch
+
+# ==========================
+# Search & Retrieval
+# ==========================
+rank-bm25
+rapidfuzz
+duckduckgo-search
+tavily-python
+
+# ==========================
+# Reranking
+# ==========================
+FlagEmbedding
+
+# ==========================
+# Document Processing
+# ==========================
+pymupdf
+pypdf
+unstructured
+python-docx
+openpyxl
+markdown
+beautifulsoup4
+lxml
+
+# ==========================
+# Data Processing
+# ==========================
+pandas
+numpy
+pyarrow
+
+# ==========================
+# APIs & HTTP
+# ==========================
+requests
+httpx
+aiohttp
+
+# ==========================
+# Database
+# ==========================
+sqlalchemy
+psycopg2-binary
+
+# ==========================
+# FastAPI Backend
+# ==========================
+fastapi
+uvicorn
+python-multipart
+
+# ==========================
+# Environment Variables
+# ==========================
+python-dotenv
+
+# ==========================
+# Utilities
+# ==========================
+tqdm
+rich
+loguru
+orjson
+
+# ==========================
+# Async
+# ==========================
+anyio
+nest_asyncio
+
+# ==========================
+# Validation
+# ==========================
+pydantic
+
+# ==========================
+# Token Counting
+# ==========================
+tiktoken
+
+# ==========================
+# YAML Config
+# ==========================
+pyyaml
+
+# ==========================
+# Graph Visualization
+# ==========================
+networkx
+graphviz
+
+# ==========================
+# Evaluation
+# ==========================
+ragas
+deepeval
+
+# ==========================
+# Optional Local LLM
+# ==========================
+ollama
+
+# ==========================
+# Optional Monitoring
+# ==========================
+opentelemetry-api
+opentelemetry-sdk

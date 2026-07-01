@@ -1,0 +1,33 @@
+body{
+
+    font-family: Arial;
+
+    margin:50px;
+
+    line-height:1.7;
+
+}
+
+h1{
+
+    text-align:center;
+
+}
+
+h2{
+
+    color:#003366;
+
+}
+
+table{
+
+    width:100%;
+
+}
+
+hr{
+
+    margin-bottom:30px;
+
+}
