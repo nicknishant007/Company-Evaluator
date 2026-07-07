@@ -24,25 +24,27 @@ export default function DashboardHeader({
 
     return (
 
-        <div className="rounded-xl border bg-white p-6 shadow">
+        <div className="relative overflow-hidden rounded-xl border border-[#3a331f] bg-gradient-to-b from-[#161410] to-[#111009] p-6 shadow-lg">
 
-            <div className="flex justify-between items-start">
+            <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-[#d4af37]/10 blur-3xl" />
+
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
 
                 <div>
 
-                    <h1 className="text-3xl font-bold">
+                    <h1 className="text-3xl font-bold tracking-tight text-[#f4ecd8]">
 
                         {company}
 
                     </h1>
 
-                    <p className="mt-2 text-gray-600">
+                    <p className="mt-2 font-medium text-[#d4af37]">
 
                         {ticker}
 
                     </p>
 
-                    <p className="text-gray-500">
+                    <p className="text-[#a89968]">
 
                         {industry}
 
@@ -52,7 +54,7 @@ export default function DashboardHeader({
 
                 <div>
 
-                    <span className="rounded-full bg-green-100 px-4 py-2 font-semibold text-green-700">
+                    <span className="inline-flex rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 px-4 py-2 font-semibold text-[#f2cf6b]">
 
                         {recommendation}
 

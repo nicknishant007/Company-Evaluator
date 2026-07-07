@@ -16,15 +16,15 @@ export default function MetricCard({
 
     return (
 
-        <div className="rounded-xl bg-slate-50 p-5 shadow">
+        <div className="rounded-xl border border-[#3a331f] bg-[#1c1810] p-5 shadow">
 
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#a89968]">
 
                 {title}
 
             </p>
 
-            <h2 className="mt-2 text-2xl font-bold">
+            <h2 className="mt-2 text-2xl font-bold text-[#f2cf6b]">
 
                 {value}
 

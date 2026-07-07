@@ -14,13 +14,13 @@ export default function Dashboard({
     data,
 }:Props) {
 
-    
-    
+
+
     // const data=dummyData;
 
     return (
 
-        <div className="max-w-7xl mx-auto space-y-8 p-8"
+        <div className="mx-auto max-w-7xl space-y-8 p-2 py-8 sm:p-8"
 >
 
             <DashboardHeader
@@ -35,7 +35,7 @@ export default function Dashboard({
 
             />
 
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
 
                 <FinancialTable
 

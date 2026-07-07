@@ -18,15 +18,19 @@ export default function SectionCard({
 
     return(
 
-        <div className="rounded-xl border bg-white p-6 shadow">
+        <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
 
-            <h2 className="mb-5 text-xl font-bold">
+            <h2 className="mb-5 text-xl font-bold text-[#f4ecd8]">
 
                 {title}
 
             </h2>
 
-            {children}
+            <div className="text-[#c9c0a3]">
+
+                {children}
+
+            </div>
 
         </div>
 

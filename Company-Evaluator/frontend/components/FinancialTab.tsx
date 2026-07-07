@@ -16,7 +16,7 @@ export default function FinancialTab({
 
         <SectionCard title="Financial Analysis">
 
-            <pre className="whitespace-pre-wrap">
+            <pre className="whitespace-pre-wrap text-[#c9c0a3]">
 
                 {report}
 

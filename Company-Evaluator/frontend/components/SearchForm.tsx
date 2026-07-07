@@ -83,15 +83,15 @@ export default function SearchForm() {
 
                     {...register("ticker")}
 
-                    placeholder="Enter Company Ticker"
+                    placeholder="Enter Company Ticker (e.g. HDFCBANK.NS)"
 
-                    className="w-full rounded-lg border p-3"
+                    className="w-full rounded-lg border border-[#3a331f] bg-[#0e0d0b] p-3 text-[#f4ecd8] placeholder:text-[#6b6142] outline-none transition focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/30"
 
                 />
 
                 {errors.ticker && (
 
-                    <p className="text-red-500">
+                    <p className="text-sm text-red-400">
 
                         {errors.ticker.message}
 
@@ -105,7 +105,7 @@ export default function SearchForm() {
 
                     disabled={mutation.isPending}
 
-                    className="rounded-lg bg-black px-6 py-3 text-white"
+                    className="w-full rounded-lg bg-gradient-to-r from-[#8a6d1f] via-[#d4af37] to-[#8a6d1f] bg-[length:200%_auto] px-6 py-3 font-semibold text-[#161410] shadow-[0_4px_20px_-6px_rgba(212,175,55,0.6)] transition hover:bg-right disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
 
                 >
 
@@ -124,6 +124,16 @@ export default function SearchForm() {
                     }
 
                 </button>
+
+                {mutation.isError && (
+
+                    <p className="text-sm text-red-400">
+
+                        Something went wrong. Please try again.
+
+                    </p>
+
+                )}
 
             </form>
 

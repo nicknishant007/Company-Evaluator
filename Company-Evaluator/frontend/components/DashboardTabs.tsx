@@ -32,33 +32,33 @@ export default function DashboardTabs({
 
         <Tabs defaultValue="overview">
 
-            <TabsList>
+            <TabsList className="border border-[#3a331f] bg-[#1c1810]">
 
-                <TabsTrigger value="overview">
+                <TabsTrigger value="overview" className="text-[#a89968] data-active:bg-[#d4af37]/15 data-active:text-[#f2cf6b]">
 
                     Company
 
                 </TabsTrigger>
 
-                <TabsTrigger value="financial">
+                <TabsTrigger value="financial" className="text-[#a89968] data-active:bg-[#d4af37]/15 data-active:text-[#f2cf6b]">
 
                     Financial
 
                 </TabsTrigger>
 
-                <TabsTrigger value="news">
+                <TabsTrigger value="news" className="text-[#a89968] data-active:bg-[#d4af37]/15 data-active:text-[#f2cf6b]">
 
                     News
 
                 </TabsTrigger>
 
-                <TabsTrigger value="risk">
+                <TabsTrigger value="risk" className="text-[#a89968] data-active:bg-[#d4af37]/15 data-active:text-[#f2cf6b]">
 
                     Risk
 
                 </TabsTrigger>
 
-                <TabsTrigger value="valuation">
+                <TabsTrigger value="valuation" className="text-[#a89968] data-active:bg-[#d4af37]/15 data-active:text-[#f2cf6b]">
 
                     Valuation
 
@@ -88,19 +88,19 @@ export default function DashboardTabs({
 
             </TabsContent>
 
-            <TabsContent value="news">
+            <TabsContent value="news" className="text-[#c9c0a3]">
 
                 News Analysis
 
             </TabsContent>
 
-            <TabsContent value="risk">
+            <TabsContent value="risk" className="text-[#c9c0a3]">
 
                 Risk Analysis
 
             </TabsContent>
 
-            <TabsContent value="valuation">
+            <TabsContent value="valuation" className="text-[#c9c0a3]">
 
                 Valuation Analysis
 

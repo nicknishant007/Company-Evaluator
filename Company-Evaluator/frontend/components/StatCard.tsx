@@ -16,15 +16,15 @@ export default function StatCard({
 
     return(
 
-        <div className="rounded-xl bg-white p-6 shadow">
+        <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
 
-            <p className="text-gray-500">
+            <p className="text-[#a89968]">
 
                 {title}
 
             </p>
 
-            <h2 className="mt-2 text-3xl font-bold">
+            <h2 className="mt-2 text-3xl font-bold text-[#f2cf6b]">
 
                 {value}
 

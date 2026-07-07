@@ -28,9 +28,9 @@ metrics,
 
 return(
 
-<div className="rounded-xl border bg-white p-6 shadow">
+<div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
 
-<h2 className="mb-5 text-2xl font-bold">
+<h2 className="mb-5 text-2xl font-bold text-[#f4ecd8]">
 
 Financial Metrics
 
@@ -40,15 +40,15 @@ Financial Metrics
 
 <TableHeader>
 
-<TableRow>
+<TableRow className="border-[#3a331f] hover:bg-transparent">
 
-<TableHead>
+<TableHead className="text-[#a89968]">
 
 Metric
 
 </TableHead>
 
-<TableHead>
+<TableHead className="text-right text-[#a89968]">
 
 Value
 
@@ -60,15 +60,15 @@ Value
 
 <TableBody>
 
-<TableRow>
+<TableRow className="border-[#2a2519] hover:bg-[#d4af37]/5">
 
-<TableCell>
+<TableCell className="text-[#d9d2bd]">
 
 Revenue Growth
 
 </TableCell>
 
-<TableCell>
+<TableCell className="text-right font-semibold text-[#f2cf6b]">
 
 {metrics.revenue_growth}%
 
@@ -76,15 +76,15 @@ Revenue Growth
 
 </TableRow>
 
-<TableRow>
+<TableRow className="border-[#2a2519] hover:bg-[#d4af37]/5">
 
-<TableCell>
+<TableCell className="text-[#d9d2bd]">
 
 Net Margin
 
 </TableCell>
 
-<TableCell>
+<TableCell className="text-right font-semibold text-[#f2cf6b]">
 
 {metrics.net_margin}%
 
@@ -92,15 +92,15 @@ Net Margin
 
 </TableRow>
 
-<TableRow>
+<TableRow className="border-[#2a2519] hover:bg-[#d4af37]/5">
 
-<TableCell>
+<TableCell className="text-[#d9d2bd]">
 
 ROE
 
 </TableCell>
 
-<TableCell>
+<TableCell className="text-right font-semibold text-[#f2cf6b]">
 
 {metrics.roe}%
 
@@ -108,15 +108,15 @@ ROE
 
 </TableRow>
 
-<TableRow>
+<TableRow className="border-[#2a2519] hover:bg-[#d4af37]/5">
 
-<TableCell>
+<TableCell className="text-[#d9d2bd]">
 
 ROA
 
 </TableCell>
 
-<TableCell>
+<TableCell className="text-right font-semibold text-[#f2cf6b]">
 
 {metrics.roa}%
 
@@ -124,15 +124,15 @@ ROA
 
 </TableRow>
 
-<TableRow>
+<TableRow className="border-[#2a2519] hover:bg-[#d4af37]/5">
 
-<TableCell>
+<TableCell className="text-[#d9d2bd]">
 
 Debt / Equity
 
 </TableCell>
 
-<TableCell>
+<TableCell className="text-right font-semibold text-[#f2cf6b]">
 
 {metrics.debt_equity}
 
@@ -140,15 +140,15 @@ Debt / Equity
 
 </TableRow>
 
-<TableRow>
+<TableRow className="border-[#2a2519] hover:bg-[#d4af37]/5">
 
-<TableCell>
+<TableCell className="text-[#d9d2bd]">
 
 Free Cash Flow
 
 </TableCell>
 
-<TableCell>
+<TableCell className="text-right font-semibold text-[#f2cf6b]">
 
 ₹ {metrics.free_cash_flow.toLocaleString()}
 

@@ -22,13 +22,13 @@ export default function OverviewTab({
 
             <p>
 
-                <strong>Company:</strong> {company}
+                <strong className="text-[#f4ecd8]">Company:</strong> {company}
 
             </p>
 
             <p className="mt-3">
 
-                <strong>Industry:</strong> {industry}
+                <strong className="text-[#f4ecd8]">Industry:</strong> {industry}
 
             </p>
 

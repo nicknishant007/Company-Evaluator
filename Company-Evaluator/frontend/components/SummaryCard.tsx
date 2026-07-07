@@ -20,15 +20,15 @@ export default function SummaryCard({
 
     return(
 
-        <div className="rounded-xl bg-white p-8 shadow">
+        <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-8 shadow-lg">
 
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-3xl font-bold text-[#f4ecd8]">
 
                 {company}
 
             </h1>
 
-            <p className="mt-2 text-gray-500">
+            <p className="mt-2 text-[#a89968]">
 
                 {industry}
 
@@ -36,7 +36,7 @@ export default function SummaryCard({
 
             <div className="mt-6">
 
-                <span className="rounded-full bg-green-100 px-4 py-2">
+                <span className="rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 px-4 py-2 text-[#f2cf6b]">
 
                     {recommendation}
 

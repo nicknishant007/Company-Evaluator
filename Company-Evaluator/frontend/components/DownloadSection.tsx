@@ -20,13 +20,13 @@ export default function DownloadSection({
 
     return (
 
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-4">
 
             <a
 
                 href={report}
 
-                className="rounded-lg bg-blue-600 px-5 py-3 text-white"
+                className="rounded-lg border border-[#d4af37]/40 bg-[#1c1810] px-5 py-3 font-medium text-[#f2cf6b] transition hover:border-[#d4af37] hover:bg-[#d4af37]/10"
 
             >
 
@@ -38,7 +38,7 @@ export default function DownloadSection({
 
                 href={pdf}
 
-                className="rounded-lg bg-red-600 px-5 py-3 text-white"
+                className="rounded-lg border border-[#d4af37]/40 bg-[#1c1810] px-5 py-3 font-medium text-[#f2cf6b] transition hover:border-[#d4af37] hover:bg-[#d4af37]/10"
 
             >
 
@@ -50,7 +50,7 @@ export default function DownloadSection({
 
                 href={slides}
 
-                className="rounded-lg bg-green-600 px-5 py-3 text-white"
+                className="rounded-lg bg-gradient-to-r from-[#8a6d1f] via-[#d4af37] to-[#8a6d1f] bg-[length:200%_auto] px-5 py-3 font-semibold text-[#161410] shadow-[0_4px_20px_-6px_rgba(212,175,55,0.6)] transition hover:bg-right"
 
             >
 
