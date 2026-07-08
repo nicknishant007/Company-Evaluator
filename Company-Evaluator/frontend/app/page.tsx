@@ -9,7 +9,7 @@ export default function HomePage() {
 
             <Navbar />
 
-            <div className="mx-auto max-w-3xl px-6 py-16">
+            <div className="mx-auto max-w-4xl px-6 py-16">
 
                 <div className="relative overflow-hidden rounded-2xl border border-[#3a331f] bg-gradient-to-b from-[#161410] to-[#0e0d0b] p-10 shadow-[0_0_60px_-15px_rgba(212,175,55,0.25)]">
 
