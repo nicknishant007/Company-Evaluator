@@ -4,21 +4,35 @@ from backend.services.report_service import report_service
 
 from agents.report_agent import ReportAgent
 
-async def report_node(state):
+
+async def report_node(
+    state,
+):
 
     llm = LLMFactory.get_llm()
 
     agent = ReportAgent(llm)
 
-    report = await agent.run(state)
+    result = await agent.run(state)
 
     report_service.save_report(
         state["ticker"],
-        report
+        result.report
     )
 
-    return {
+    print("\n========== REPORT OUTPUT ==========")
+    print("Recommendation:",result.recommendation)
+    print("Overall Risk:",result.overall_risk)
+    print("Report Length:",len(result.report))
+    print("===================================\n")
 
-        "report": report
+
+    return {
+        "report": result.report,
+
+        "report_metadata": {
+            "recommendation":result.recommendation,
+            "overall_risk":result.overall_risk,
+        }
 
     }

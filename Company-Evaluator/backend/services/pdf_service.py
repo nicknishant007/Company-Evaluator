@@ -13,7 +13,7 @@ class PDFService:
 
         pdf_path = Path(
 
-            f"outputs/pdf/{ticker}_Report.pdf"
+            f"outputs/{ticker}_Report.pdf"
 
         )
 

@@ -16,6 +16,7 @@ from graphs.nodes import (
     report_node,
     slide_node,
     parser_node,
+    export_node,
     financial_calculator_node
 
 )
@@ -72,6 +73,10 @@ builder.add_node(
 builder.add_node(
     "slides",
     slide_node
+)
+builder.add_node(
+    "export",
+    export_node
 )
 
 # -----------------------
@@ -144,8 +149,14 @@ builder.add_edge(
 
 builder.add_edge(
     "parser",
+    "export"
+)
+
+builder.add_edge(
+    "export",
     "slides"
 )
+
 
 builder.add_edge(
     "slides",

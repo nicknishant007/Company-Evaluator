@@ -3,6 +3,13 @@ from typing import Any
 from typing_extensions import TypedDict
 
 
+class ReportMetadata(TypedDict):
+
+    recommendation: str
+
+    overall_risk: str
+
+
 class CompanyState(TypedDict):
 
     ticker: str
@@ -13,7 +20,7 @@ class CompanyState(TypedDict):
 
     financials: Any
 
-    financial_metrics:Any
+    financial_metrics: Any
 
     news: Any
 
@@ -29,8 +36,16 @@ class CompanyState(TypedDict):
 
     valuation_analysis: Any
 
-    report: Any
+    report: str
+
+    report_metadata: ReportMetadata
+
+    cleaned_report: str
 
     parsed_report: Any
 
-    slides_content:Any
+    markdown_path: str
+
+    pdf_path: str
+
+    slides_content: Any

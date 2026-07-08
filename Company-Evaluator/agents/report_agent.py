@@ -1,6 +1,9 @@
 from agents.base import BaseAgent
 
-from state.state import CompanyState 
+from state.state import CompanyState
+
+from schemas.reportoutput import ReportOutput
+
 
 class ReportAgent(
     BaseAgent
@@ -8,9 +11,12 @@ class ReportAgent(
 
     prompt_file = "report_gen.txt"
 
+    output_schema = ReportOutput
+
+
     def build_prompt(
         self,
-        state:CompanyState,
+        state: CompanyState,
     ):
 
         return f"""
@@ -40,11 +46,3 @@ Valuation Analysis:
 
 {state["valuation_analysis"]}
 """
-
-    def update_state(
-        self,
-        state:CompanyState,
-        response,
-    ):
-
-        state["report"] = response

@@ -9,6 +9,10 @@ class BaseAgent(ABC):
     # Every child overrides this
     prompt_file = ""
 
+    # Optional structured output schema
+    output_schema = None
+
+
     def __init__(
         self,
         llm,
@@ -32,11 +36,13 @@ class BaseAgent(ABC):
 
             self.prompt = ""
 
+
     @abstractmethod
     def build_prompt(
         self,
         state: dict,
     ) -> str:
+
         pass
 
 
@@ -53,6 +59,26 @@ class BaseAgent(ABC):
 
             print("Prompt built")
 
+
+            # Structured output agent
+            if self.output_schema is not None:
+
+                structured_llm = (
+                    self.llm.with_structured_output(
+                        self.output_schema
+                    )
+                )
+
+                response = await structured_llm.ainvoke(
+                    prompt
+                )
+
+                print("Structured LLM finished")
+
+                return response
+
+
+            # Normal text agent
             response = await self.llm.ainvoke(
                 prompt
             )
@@ -61,11 +87,15 @@ class BaseAgent(ABC):
 
             return response.content
 
+
         except Exception as e:
 
             print("\n====== AGENT ERROR ======")
+
             print(type(e))
+
             print(e)
+
             print("=========================\n")
 
             raise

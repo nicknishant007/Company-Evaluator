@@ -49,9 +49,9 @@ async def analyze_company(
 
     industry=state["profile"].industry,
 
-    recommendation=...,          # Later read from report
+    recommendation=state["report_metadata"]["recommendation"],          
 
-    overall_risk=...,       # Later read from risk agent
+    overall_risk=state["report_metadata"]["overall_risk"],       
 
     financial_metrics=FinancialMetricsResponse(
 
@@ -69,7 +69,7 @@ async def analyze_company(
 
     ),
 
-    report=state["report"],
+    report=state["cleaned_report"],
 
     status="Completed",
 
