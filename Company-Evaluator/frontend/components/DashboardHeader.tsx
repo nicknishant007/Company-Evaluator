@@ -4,9 +4,9 @@ interface Props {
 
     ticker: string;
 
-    industry: string;
+    industry: string | null;
 
-    recommendation: string;
+    recommendation: string | null;
 
 }
 

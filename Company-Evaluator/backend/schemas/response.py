@@ -1,3 +1,4 @@
+from typing import Any
 from pydantic import BaseModel
 
 
@@ -30,7 +31,7 @@ class AnalyzeResponse(BaseModel):
 
     financial_metrics: FinancialMetricsResponse | None = None
 
-    report: str | None = None
+    report: list[dict[str,Any]] | None = None
 
     status: str
 

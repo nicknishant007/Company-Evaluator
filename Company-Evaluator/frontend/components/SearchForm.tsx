@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -56,12 +57,14 @@ export default function SearchForm() {
         },
 
         onError: (err) => {
-
-            console.error("ERROR");
-
-            console.error(err);
-
-        }
+    if (axios.isAxiosError(err)) {
+        console.log("STATUS:", err.response?.status);
+        console.log("BACKEND DATA:", err.response?.data);
+        console.log("MESSAGE:", err.message);
+    } else {
+        console.log("UNKNOWN ERROR:", err);
+    }
+}
 
     });
 

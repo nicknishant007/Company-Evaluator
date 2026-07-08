@@ -69,7 +69,7 @@ async def analyze_company(
 
     ),
 
-    report=state["cleaned_report"],
+    report=state["parsed_report"],
 
     status="Completed",
 

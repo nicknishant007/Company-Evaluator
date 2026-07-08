@@ -1,39 +1,79 @@
-import ReactMarkdown from "react-markdown";
+import type { ReportBlock } from "@/types/api";
 
 interface Props {
-
-    report: string;
-
+  report: ReportBlock[];
 }
 
 export default function ReportViewer({
-
-    report,
-
+  report,
 }: Props) {
+  return (
+    <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
 
-    return (
+      <h2 className="mb-8 text-2xl font-bold text-[#f4ecd8]">
+        Research Report
+      </h2>
 
-        <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
+      <div className="space-y-5">
 
-            <h2 className="mb-5 text-2xl font-bold text-[#f4ecd8]">
+        {report.map((block, index) => {
 
-                Research Report
+          if (block.type === "heading") {
+            if (block.level === "h1") {
+              return (
+                <h1
+                  key={index}
+                  className="mt-10 border-b border-[#3a331f] pb-3 text-3xl font-bold text-[#f2cf6b]"
+                >
+                  {block.text}
+                </h1>
+              );
+            }
 
-            </h2>
+            return (
+              <h2
+                key={index}
+                className="mt-8 text-2xl font-bold text-[#f2cf6b]"
+              >
+                {block.text}
+              </h2>
+            );
+          }
 
-            <div className="prose prose-invert max-w-none prose-headings:text-[#f2cf6b] prose-strong:text-[#f4ecd8] prose-a:text-[#d4af37] prose-p:text-[#c9c0a3] prose-li:text-[#c9c0a3] prose-hr:border-[#3a331f]">
+          if (block.type === "paragraph") {
+            return (
+              <p
+                key={index}
+                className="leading-8 text-[#c9c0a3]"
+              >
+                {block.text}
+              </p>
+            );
+          }
 
-                <ReactMarkdown>
+          if (block.type === "bullet_list") {
+            return (
+              <ul
+                key={index}
+                className="list-disc space-y-3 pl-6 text-[#c9c0a3]"
+              >
+                {block.items.map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    className="leading-7"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            );
+          }
 
-                    {report}
+          return null;
+        })}
 
-                </ReactMarkdown>
+      </div>
 
-            </div>
-
-        </div>
-
-    );
-
+    </div>
+  );
 }
