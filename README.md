@@ -1,305 +1,281 @@
-# 🚀 AI Company Evaluator
+🚀 AI Company Evaluator
 
-An **AI-powered Multi-Agent Equity Research System** that automatically collects company data, analyzes financial performance, evaluates business risks, performs valuation analysis, and generates **professional investment research reports and PowerPoint presentations**.
+An AI-powered Multi-Agent Equity Research Platform that automates company research, financial analysis, risk assessment, valuation, and professional report generation using LangGraph, LangChain, and Large Language Models.
 
-Built using **LangGraph**, **LangChain**, **LLMs**, and multiple financial data sources to automate the workflow of a professional equity research analyst.
+Built to demonstrate how autonomous AI agents can collaborate to perform institutional-grade equity research with minimal human intervention.
 
----
+🌟 Why This Project?
 
-# ✨ Features
+Traditional equity research requires analysts to spend hours collecting financial data, reading annual reports, analyzing company news, calculating financial ratios, assessing risks, and preparing investment reports.
 
-* 📊 Automated Company Data Collection
-* 📈 Financial Statement Analysis
-* 📰 Real-Time News & Market Analysis
-* ⚠️ AI-Based Risk Assessment
-* 💰 Valuation Analysis
-* 📝 Professional Equity Research Report Generation
-* 📄 Automatic PDF Export
-* 📊 Automatic PowerPoint Presentation Generation
-* 🤖 Multi-Agent AI Architecture
-* 🔄 Asynchronous Parallel Workflow using LangGraph
-* 🌐 Web Research Integration
-* 📉 Financial Metrics & Ratio Calculation (Planned)
-* 🧠 Multi-LLM Support (Groq, Gemini, Mistral, Ollama)
-* 💬 Conversational Company Analysis (Upcoming)
-* 📈 Interactive Dashboard (Upcoming)
+This project automates that entire workflow.
 
----
+Given only a company ticker, the system independently researches the company, analyzes its financial performance, evaluates risks, generates an investment recommendation, and produces both a professional research report and an executive PowerPoint presentation.
 
-# 🏗️ System Architecture
+✨ Features
+📊 Company Intelligence
+🏢 Business Overview
+🌍 Industry Analysis
+⚔️ Competitive Positioning
+💼 Business Model Evaluation
+👨‍💼 Management Insights
+📈 Financial Analysis
+Revenue Analysis
+Profitability Analysis
+Margin Analysis
+Balance Sheet Review
+Cash Flow Analysis
+Financial Health Assessment
+Growth Trend Analysis
+🧮 Financial Calculator Engine
 
-```
-                    User Input
-                         │
-                         ▼
-                 Company Ticker
-                         │
-                         ▼
-              Data Collection Service
-                         │
-      ┌──────────┬────────────┬──────────┐
-      ▼          ▼            ▼
- Yahoo Finance  NewsAPI    Tavily Search
-      │          │            │
-      └──────────┴────────────┘
-                 │
-                 ▼
-             Company State
-                 │
-                 ▼
-         LangGraph Multi-Agent System
-                 │
- ┌────────┬────────┬────────┬─────────┐
- ▼        ▼        ▼        ▼
-Company Financial News    Calculator
-Agent    Agent     Agent      (Planned)
-                 │
-                 ▼
-            Risk Agent
-                 │
-                 ▼
-         Valuation Agent
-                 │
-                 ▼
-           Report Agent
-                 │
-                 ▼
-            Slide Agent
-                 │
-      ┌──────────┴─────────┐
-      ▼                    ▼
-   PDF Exporter      PPT Exporter
-```
+Automatically calculates
 
----
+Revenue Growth
+EPS Growth
+ROE
+ROA
+Debt-to-Equity
+Current Ratio
+Quick Ratio
+Operating Margin
+Net Margin
+Free Cash Flow
+Working Capital
+Interest Coverage
+Additional Financial Ratios
+📰 Market Intelligence
+Latest Company News
+Industry Developments
+Market Sentiment
+Major Corporate Events
+Product Launches
+Strategic Partnerships
+Acquisition Analysis
+⚠️ Risk Assessment
+Business Risk
+Financial Risk
+Industry Risk
+Operational Risk
+Regulatory Risk
+Investment Risk Score
+💰 Valuation Analysis
+Relative Valuation
+Premium / Discount Analysis
+Investment Thesis
+Long-Term Outlook
+Buy / Hold / Sell Recommendation
+📝 AI Report Generation
 
-# 🤖 AI Agents
+Generates a complete institutional-style research report including
 
-## Company Research Agent
+Executive Summary
+Company Overview
+Industry Analysis
+Business Analysis
+Financial Performance
+Financial Metrics
+Risk Assessment
+Valuation
+Investment Recommendation
+Overall Risk Rating
+Conclusion
+📊 Presentation Generation
 
-* Business overview
-* Industry analysis
-* Competitive positioning
-* Business model analysis
+Automatically creates an executive PowerPoint presentation containing
 
----
+Company Snapshot
+Financial Highlights
+Business Analysis
+Risks
+Valuation
+Recommendation
+🤖 Multi-Agent Architecture
 
-## Financial Analysis Agent
+The platform uses specialized AI agents where every agent focuses on a single responsibility.
 
-* Revenue analysis
-* Profitability analysis
-* Margin analysis
-* Financial health assessment
+🤖 Agent	Responsibility
+🏢 Company Agent	Business & Industry Research
+📈 Financial Agent	Financial Statement Analysis
+📰 News Agent	Market & News Analysis
+🧮 Financial Calculator	Financial Metric Computation
+⚠️ Risk Agent	Risk Evaluation
+💰 Valuation Agent	Investment Recommendation
+📝 Report Agent	Professional Report Generation
+📄 Parser Agent	Markdown & Structured Output
+📊 Slide Agent	PowerPoint Generation
+⚙️ Automated Workflow
+                 User Input
+                      │
+                      ▼
+              Company Ticker
+                      │
+                      ▼
+          Data Collection Layer
+                      │
+     ┌─────────┬─────────┬─────────┐
+     ▼         ▼         ▼
+ Yahoo      Financial   Web Search
+ Finance      Data
+     └─────────┴─────────┘
+               │
+               ▼
+          Shared CompanyState
+               │
+               ▼
+      LangGraph StateGraph
+               │
+      ┌────────┼────────┐
+      ▼        ▼        ▼
+ Company   Financial   News
+  Agent      Agent     Agent
+               │
+               ▼
+      Financial Calculator
+               │
+               ▼
+          Risk Agent
+               │
+               ▼
+       Valuation Agent
+               │
+               ▼
+         Report Agent
+               │
+               ▼
+         Parser Agent
+               │
+               ▼
+          Slide Agent
+               │
+        ┌──────┴──────┐
+        ▼             ▼
+      PDF Export   PPT Export
+🏗️ Engineering Highlights
 
----
+✅ Multi-Agent AI Architecture
 
-## News Analysis Agent
+✅ Shared State Management using LangGraph
 
-* Recent developments
-* Sentiment analysis
-* Industry news
-* Market updates
+✅ Asynchronous Parallel Execution
 
----
+✅ Typed State Management
 
-## Risk Analysis Agent
+✅ Modular Agent Design
 
-* Business risk
-* Market risk
-* Financial risk
-* Industry risk
-* Regulatory risk
+✅ Configurable Multi-LLM Support
 
----
+✅ Structured Prompt Engineering
 
-## Valuation Agent
+✅ Automated Report Generation
 
-* Relative valuation
-* Premium/discount analysis
-* Investment thesis
-* Long-term outlook
+✅ Automated PowerPoint Generation
 
----
+✅ Deterministic Financial Calculations
 
-## Report Agent
+✅ Markdown-Based Export Pipeline
 
-Generates a professional 4-5 page equity research report using all previous agent outputs.
+✅ Production-Oriented Project Structure
 
----
+🛠️ Tech Stack
+🤖 AI & Orchestration
+LangGraph
+LangChain
+🧠 Large Language Models
+Gemini
+Groq
+Mistral
+Ollama
+OpenRouter
+🐍 Backend
+Python
+AsyncIO
+FastAPI
+📊 Financial Data Sources
+Yahoo Finance
+Tavily Search
+Web Search APIs
+📄 Report Generation
+Markdown
+ReportLab
+python-pptx
+🗂️ State Management
+TypedDict
+Shared CompanyState
+💡 Why These Technologies?
+🚀 LangGraph
 
-## Slide Agent
+Provides stateful orchestration for coordinating multiple AI agents with shared memory, conditional execution, and parallel workflows.
 
-Converts the research report into a structured 10-slide presentation optimized for PowerPoint generation.
+🧠 LangChain
 
----
+Simplifies prompt management, LLM integration, structured outputs, and agent implementation.
 
-# 🛠️ Tech Stack
+⚡ AsyncIO
 
-## AI
+Allows independent data collection and analysis tasks to execute concurrently, reducing overall processing time.
 
-* LangGraph
-* LangChain
-* Groq
-* Gemini
-* Mistral
-* Ollama
+🗂️ Shared CompanyState
 
----
+Acts as a centralized memory that enables all agents to collaborate without direct dependencies.
 
-## Backend
+🧮 Financial Calculator Engine
 
-* Python
-* AsyncIO
+Performs deterministic financial calculations in Python instead of relying on LLMs, improving numerical accuracy and consistency.
 
----
+📝 Markdown Pipeline
 
-## Data Sources
+Generates reports in Markdown first, allowing the same content to be converted into both PDF and PowerPoint formats.
 
-* Yahoo Finance
-* NewsAPI
-* Tavily Search
+🔄 Multi-LLM Support
 
----
+Supports multiple providers, enabling flexibility in balancing model quality, latency, and operational cost.
 
-## Report Generation
-
-* ReportLab
-* python-pptx
-
----
-
-## State Management
-
-* TypedDict
-* Shared CompanyState
-* Multi-Agent Memory
-
----
-
-# 📂 Project Structure
-
-```
+📂 Project Structure
 AI-Company-Evaluator/
 
-│
-
 ├── agents/
-
 ├── graphs/
-
-├── data_sources/
-
-├── exporters/
-
-├── financial_engine/
-
-├── llms/
-
 ├── state/
-
+├── llms/
+├── prompts/
+├── data_sources/
+├── financial_engine/
+├── exporters/
+├── parsers/
+├── backend/
 ├── cache/
-
-├── scripts/
-
 ├── outputs/
-
+├── config/
 └── README.md
-```
+📄 Generated Outputs
+📑 Institutional Equity Research Report
+📕 Professional PDF Report
+📊 Executive PowerPoint Presentation
+📈 Financial Metrics
+⚠️ Risk Assessment
+💰 Valuation Analysis
+📝 Investment Recommendation
+📰 News Summary
+🎯 Future Roadmap
+🤖 Conversational Company Assistant
+📈 Interactive Financial Charts
+💼 Portfolio Analysis
+🏢 Multi-Company Comparison
+📊 DCF Valuation Engine
+🔍 RAG-Based Company Knowledge
+🌐 React Dashboard
+🚀 FastAPI REST API
+🐳 Docker Deployment
+☁️ Cloud Deployment
+📡 Real-Time Market Monitoring
+🔄 Automated Daily Research Reports
+🌍 Vision
 
----
+The vision of this project is to build an AI-native investment research platform capable of autonomously generating institutional-grade equity research, continuously monitoring companies, and assisting investors through intelligent, explainable, and scalable multi-agent workflows.
 
-# 🚀 Workflow
-
-```
-Ticker
-
-↓
-
-Collect Company Data
-
-↓
-
-Parallel AI Analysis
-
-↓
-
-Company Analysis
-
-↓
-
-Financial Analysis
-
-↓
-
-News Analysis
-
-↓
-
-Risk Analysis
-
-↓
-
-Valuation Analysis
-
-↓
-
-Research Report
-
-↓
-
-Slide Generation
-
-↓
-
-PDF Export
-
-↓
-
-PowerPoint Export
-```
-
----
-
-# 📄 Generated Outputs
-
-* Professional Equity Research Report (PDF)
-* Executive Presentation (PPTX)
-* Investment Recommendation
-* Risk Assessment
-* Business Analysis
-* Financial Analysis
-
----
-
-# 🔥 Upcoming Features
-
-* AI Chat with Company Reports
-* Conversational Investment Assistant
-* Financial Calculator Engine
-* DCF Valuation Engine
-* Interactive Charts
-* Portfolio Analysis
-* Company Comparison
-* RAG-based Knowledge Retrieval
-* AI Financial Advisor
-* FastAPI REST API
-* Streamlit Dashboard
-* React Frontend
-* Docker Deployment
-* Multi-LLM Failover Architecture
-* Real-Time Stock Monitoring
-* Automated Daily Report Generation
-
----
-
-# 📈 Future Vision
-
-The goal of this project is to build an AI-powered investment research platform capable of generating institutional-grade equity research reports with minimal human intervention by leveraging multi-agent orchestration and large language models.
-
----
-
-# 👨‍💻 Author
+👨‍💻 Author
 
 Nishant Kumar
 
-AI • Backend • GenAI • Multi-Agent Systems • Financial AI
+AI Engineer • Backend Developer • GenAI • Multi-Agent Systems • Financial AI
