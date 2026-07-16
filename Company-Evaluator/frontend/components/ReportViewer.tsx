@@ -8,9 +8,9 @@ export default function ReportViewer({
   report,
 }: Props) {
   return (
-    <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_-18px_rgba(124,92,255,0.35)]">
 
-      <h2 className="mb-8 text-2xl font-bold text-[#f4ecd8]">
+      <h2 className="mb-8 text-2xl font-bold text-foreground">
         Research Report
       </h2>
 
@@ -23,7 +23,7 @@ export default function ReportViewer({
               return (
                 <h1
                   key={index}
-                  className="mt-10 border-b border-[#3a331f] pb-3 text-3xl font-bold text-[#f2cf6b]"
+                  className="mt-10 border-b border-border pb-3 text-3xl font-bold text-[#5b3fd6]"
                 >
                   {block.text}
                 </h1>
@@ -33,7 +33,7 @@ export default function ReportViewer({
             return (
               <h2
                 key={index}
-                className="mt-8 text-2xl font-bold text-[#f2cf6b]"
+                className="mt-8 text-2xl font-bold text-[#5b3fd6]"
               >
                 {block.text}
               </h2>
@@ -44,7 +44,7 @@ export default function ReportViewer({
             return (
               <p
                 key={index}
-                className="leading-8 text-[#c9c0a3]"
+                className="leading-8 text-muted-foreground"
               >
                 {block.text}
               </p>
@@ -55,7 +55,7 @@ export default function ReportViewer({
             return (
               <ul
                 key={index}
-                className="list-disc space-y-3 pl-6 text-[#c9c0a3]"
+                className="list-disc space-y-3 pl-6 text-muted-foreground"
               >
                 {block.items.map((item, itemIndex) => (
                   <li

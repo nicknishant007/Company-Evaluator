@@ -1,5 +1,6 @@
 import "./globals.css";
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata = {
   title: "Company Evaluator",
@@ -14,7 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryProvider>
+          <div className="flex min-h-screen">
+            <Sidebar />
+            <div className="min-w-0 flex-1">{children}</div>
+          </div>
+        </ReactQueryProvider>
       </body>
     </html>
   );

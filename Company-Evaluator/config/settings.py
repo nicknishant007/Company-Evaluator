@@ -17,6 +17,8 @@ class Settings(BaseSettings):
 
     DEFAULT_LLM: str = "mistral"
 
+    QWEN_MODEL:str="qwen/qwen3-14b:free"
+
     OPENAI_MODEL: str = "gpt-4.1-mini"
 
     GEMINI_MODEL: str = "gemini-2.5-flash"
@@ -25,7 +27,7 @@ class Settings(BaseSettings):
 
     MISTRAL_MODEL: str = "mistral-small-latest"
 
-    OPENROUTER_MODEL: str = "gpt-4.1-mini"
+    OPENROUTER_MODEL: str = "tencent/hy3:free"
 
     LANGSMITH_TRACING:str=""
 

@@ -145,3 +145,5 @@ ollama
 # ==========================
 opentelemetry-api
 opentelemetry-sdk
+
+run:python -m uvicorn backend.app:app --reload                                                                                                                 

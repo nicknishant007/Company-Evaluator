@@ -24,27 +24,27 @@ export default function DashboardHeader({
 
     return (
 
-        <div className="relative overflow-hidden rounded-xl border border-[#3a331f] bg-gradient-to-b from-[#161410] to-[#111009] p-6 shadow-lg">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_-18px_rgba(124,92,255,0.35)]">
 
-            <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-[#d4af37]/10 blur-3xl" />
+            <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-[#7c5cff]/10 blur-3xl" />
 
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
 
                 <div>
 
-                    <h1 className="text-3xl font-bold tracking-tight text-[#f4ecd8]">
+                    <h1 className="text-3xl font-bold tracking-tight text-foreground">
 
                         {company}
 
                     </h1>
 
-                    <p className="mt-2 font-medium text-[#d4af37]">
+                    <p className="mt-2 font-medium text-[#7c5cff]">
 
                         {ticker}
 
                     </p>
 
-                    <p className="text-[#a89968]">
+                    <p className="text-muted-foreground">
 
                         {industry}
 
@@ -54,7 +54,7 @@ export default function DashboardHeader({
 
                 <div>
 
-                    <span className="inline-flex rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 px-4 py-2 font-semibold text-[#f2cf6b]">
+                    <span className="inline-flex rounded-full border border-[#7c5cff]/30 bg-[#7c5cff]/10 px-4 py-2 font-semibold text-[#5b3fd6]">
 
                         {recommendation}
 

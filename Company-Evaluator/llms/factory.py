@@ -4,6 +4,7 @@ from llms.providers.groq import get_groq
 from llms.providers.mistral import get_mistral
 from llms.providers.openai import get_openai
 from llms.providers.gemini import get_gemini
+from llms.providers.qwen import get_qwen
 from llms.providers.openrouter_provider import get_openrouter
 
 
@@ -22,5 +23,7 @@ class LLMFactory:
             return get_gemini()
         elif provider == "openrouter":
             return get_openrouter()
+        elif provider == "qwen":
+            return get_qwen()
         else:
             raise ValueError(f"Unsupported LLM provider: {provider}")

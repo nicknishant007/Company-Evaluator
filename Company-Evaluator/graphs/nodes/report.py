@@ -14,6 +14,8 @@ async def report_node(
     agent = ReportAgent(llm)
 
     result = await agent.run(state)
+    print("result",result)
+    print("Type",type(result))
 
     report_service.save_report(
         state["ticker"],

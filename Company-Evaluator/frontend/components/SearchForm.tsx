@@ -4,6 +4,7 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Search } from "lucide-react";
 import Dashboard from "./Dashboard";
 
 import { useAnalyze } from "@/hooks/useAnalyze";
@@ -82,19 +83,25 @@ export default function SearchForm() {
 
             >
 
-                <input
+                <div className="relative">
 
-                    {...register("ticker")}
+                    <Search className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-muted-foreground" />
 
-                    placeholder="Enter Company Ticker (e.g. HDFCBANK.NS)"
+                    <input
 
-                    className="w-full rounded-lg border border-[#3a331f] bg-[#0e0d0b] p-3 text-[#f4ecd8] placeholder:text-[#6b6142] outline-none transition focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37]/30"
+                        {...register("ticker")}
 
-                />
+                        placeholder="Enter Company Ticker (e.g. HDFCBANK.NS)"
+
+                        className="w-full rounded-xl border border-border bg-muted p-3 pl-11 text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#7c5cff] focus:ring-2 focus:ring-[#7c5cff]/25"
+
+                    />
+
+                </div>
 
                 {errors.ticker && (
 
-                    <p className="text-sm text-red-400">
+                    <p className="text-sm text-destructive">
 
                         {errors.ticker.message}
 
@@ -108,7 +115,7 @@ export default function SearchForm() {
 
                     disabled={mutation.isPending}
 
-                    className="w-full rounded-lg bg-gradient-to-r from-[#8a6d1f] via-[#d4af37] to-[#8a6d1f] bg-[length:200%_auto] px-6 py-3 font-semibold text-[#161410] shadow-[0_4px_20px_-6px_rgba(212,175,55,0.6)] transition hover:bg-right disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                    className="w-full rounded-xl bg-gradient-to-r from-[#7c5cff] via-[#a78bfa] to-[#ec4899] bg-[length:200%_auto] px-6 py-3 font-semibold text-white shadow-[0_10px_28px_-8px_rgba(124,92,255,0.7)] transition hover:bg-right disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
 
                 >
 
@@ -130,7 +137,7 @@ export default function SearchForm() {
 
                 {mutation.isError && (
 
-                    <p className="text-sm text-red-400">
+                    <p className="text-sm text-destructive">
 
                         Something went wrong. Please try again.
 

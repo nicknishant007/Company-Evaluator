@@ -1,41 +1,38 @@
+import { Bell, Mail } from "lucide-react";
+
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-20 border-b border-[#262626] bg-black/90 backdrop-blur supports-[backdrop-filter]:bg-black/80">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+    <nav className="sticky top-0 z-20 border-b border-border/70 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#404040] bg-gradient-to-br from-[#262626] to-black text-sm font-bold text-white">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#a78bfa] to-[#7c5cff] text-sm font-bold text-white shadow-[0_4px_14px_-4px_rgba(124,92,255,0.7)]">
             CE
           </span>
-          <div>
-            <h1 className="text-base leading-tight font-semibold tracking-tight text-white">
-              Company Evaluator
-            </h1>
-            <span className="inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-medium tracking-wide text-gray-300 uppercase">
-              AI Research Partner
+          <h1 className="text-lg font-semibold tracking-tight text-foreground">
+            Company Evaluator
+          </h1>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <p className="hidden text-sm tracking-wide text-muted-foreground sm:block">
+            AI Equity Research Platform
+          </p>
+
+          <div className="flex items-center gap-2">
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition hover:text-primary">
+              <Mail className="size-4" />
+            </button>
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition hover:text-primary">
+              <Bell className="size-4" />
+            </button>
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#a78bfa] to-[#ec4899] text-xs font-semibold text-white shadow-sm">
+              CE
             </span>
           </div>
         </div>
-
-        <div className="hidden items-center gap-1 rounded-full border border-[#262626] bg-[#111111] p-1.5 md:flex">
-          {["Analyze", "Metrics", "Reports", "Pricing"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="rounded-full px-4 py-2 text-sm font-medium text-gray-400 transition hover:bg-white/10 hover:text-white"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-
-        <a
-          href="#analyze"
-          className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-gray-200"
-        >
-          <span className="h-2 w-2 rounded-full bg-green-500" />
-          Get Started
-        </a>
       </div>
+
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#7c5cff]/40 to-transparent" />
     </nav>
   );
 }

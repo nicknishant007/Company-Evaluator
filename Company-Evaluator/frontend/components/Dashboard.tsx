@@ -1,4 +1,5 @@
 import DashboardHeader from "./DashboardHeader";
+import StatCard from "./StatCard";
 import FinancialTable from "./FinancialTable";
 import FinancialChart from "./FinancialChart";
 import ReportViewer from "./ReportViewer";
@@ -21,6 +22,25 @@ export default function Dashboard({
         industry={data.industry}
         recommendation={data.recommendation}
       />
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <StatCard
+          title="Revenue Growth"
+          value={`${Number(data.financial_metrics.revenue_growth).toFixed(3) ?? "-"}%`}
+        />
+        <StatCard
+          title="Net Margin"
+          value={`${Number(data.financial_metrics.net_margin).toFixed(3) ?? "-"}%`}
+        />
+        <StatCard
+          title="ROE"
+          value={`${Number(data.financial_metrics.roe).toFixed(3) ?? "-"}%`}
+        />
+        <StatCard
+          title="ROA"
+          value={`${Number(data.financial_metrics.roa).toFixed(3) ?? "-"}%`}
+        />
+      </div>
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
         <FinancialTable

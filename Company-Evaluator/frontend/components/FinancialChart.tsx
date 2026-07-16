@@ -26,7 +26,7 @@ interface Props {
 
 }
 
-const GOLD_SHADES = ["#f2cf6b", "#d4af37", "#b8922c", "#8a6d1f"];
+const VIOLET_SHADES = ["#7c5cff", "#a78bfa", "#ec4899", "#5b3fd6"];
 
 function ChartTooltip({ active, payload, label }: any) {
 
@@ -34,15 +34,15 @@ function ChartTooltip({ active, payload, label }: any) {
 
     return (
 
-        <div className="rounded-lg border border-[#d4af37]/50 bg-[#161410] px-4 py-2 shadow-[0_4px_20px_-4px_rgba(212,175,55,0.4)]">
+        <div className="rounded-lg border border-[#7c5cff]/30 bg-card px-4 py-2 shadow-[0_10px_30px_-8px_rgba(124,92,255,0.4)]">
 
-            <p className="text-xs tracking-wide text-[#a89968] uppercase">
+            <p className="text-xs tracking-wide text-muted-foreground uppercase">
 
                 {label}
 
             </p>
 
-            <p className="text-lg font-semibold text-[#f2cf6b]">
+            <p className="text-lg font-semibold text-[#5b3fd6]">
 
                 {payload[0].value}%
 
@@ -98,9 +98,9 @@ export default function FinancialChart({
 
     return (
 
-        <div className="rounded-xl border border-[#3a331f] bg-[#161410] p-6 shadow-lg">
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-[0_10px_30px_-18px_rgba(124,92,255,0.35)]">
 
-            <h2 className="mb-4 text-xl font-bold text-[#f4ecd8]">
+            <h2 className="mb-4 text-xl font-bold text-foreground">
 
                 Financial Performance
 
@@ -114,13 +114,13 @@ export default function FinancialChart({
 
                         <defs>
 
-                            {GOLD_SHADES.map((color, i) => (
+                            {VIOLET_SHADES.map((color, i) => (
 
                                 <linearGradient
 
                                     key={color}
 
-                                    id={`goldBar-${i}`}
+                                    id={`violetBar-${i}`}
 
                                     x1="0"
 
@@ -146,7 +146,7 @@ export default function FinancialChart({
 
                             strokeDasharray="3 3"
 
-                            stroke="#3a331f"
+                            stroke="var(--border)"
 
                             vertical={false}
 
@@ -156,9 +156,9 @@ export default function FinancialChart({
 
                             dataKey="name"
 
-                            tick={{ fontSize: 12, fill: "#a89968" }}
+                            tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
 
-                            axisLine={{ stroke: "#3a331f" }}
+                            axisLine={{ stroke: "var(--border)" }}
 
                             tickLine={false}
 
@@ -166,9 +166,9 @@ export default function FinancialChart({
 
                         <YAxis
 
-                            tick={{ fontSize: 12, fill: "#a89968" }}
+                            tick={{ fontSize: 12, fill: "var(--muted-foreground)" }}
 
-                            axisLine={{ stroke: "#3a331f" }}
+                            axisLine={{ stroke: "var(--border)" }}
 
                             tickLine={false}
 
@@ -176,7 +176,7 @@ export default function FinancialChart({
 
                         <Tooltip
 
-                            cursor={{ fill: "rgba(212,175,55,0.08)" }}
+                            cursor={{ fill: "rgba(124,92,255,0.08)" }}
 
                             content={<ChartTooltip />}
 
@@ -198,9 +198,9 @@ export default function FinancialChart({
 
                                     key={entry.name}
 
-                                    fill={`url(#goldBar-${index % GOLD_SHADES.length})`}
+                                    fill={`url(#violetBar-${index % VIOLET_SHADES.length})`}
 
-                                    stroke={GOLD_SHADES[index % GOLD_SHADES.length]}
+                                    stroke={VIOLET_SHADES[index % VIOLET_SHADES.length]}
 
                                     strokeWidth={1}
 
@@ -216,7 +216,7 @@ export default function FinancialChart({
 
                                 formatter={((v: any) => `${v}%`) as any}
 
-                                fill="#f4ecd8"
+                                fill="var(--foreground)"
 
                                 fontSize={12}
 

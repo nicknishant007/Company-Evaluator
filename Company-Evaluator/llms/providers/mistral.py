@@ -8,7 +8,6 @@ def get_mistral():
         api_key=settings.MISTRAL_API_KEY,
         model_provider="mistralai",
         temperature=0.2,
-        max_tokens=15000,
-        streaming=True,
+        max_tokens=25000,
         max_retries=4
     )
