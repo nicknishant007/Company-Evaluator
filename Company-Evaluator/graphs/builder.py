@@ -116,16 +116,16 @@ builder.add_edge(
     "finance"
 )
 builder.add_edge(
-    "finance",
+    "data_collection",
     "company"
 )
 
 builder.add_edge(
-    "company",
+    "data_collection",
     "news"
 )
 builder.add_edge(
-    "news",
+    ["news","finance","company"],
     "risk"
 )
 
@@ -154,13 +154,13 @@ builder.add_edge(
 
 builder.add_edge(
     "export",
-    "slides"
-)
-
-
-builder.add_edge(
-    "slides",
     END
 )
+
+
+'''builder.add_edge(
+    "slides",
+    END
+)'''
 
 company_graph = builder.compile()
