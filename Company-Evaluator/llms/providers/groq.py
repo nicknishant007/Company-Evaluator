@@ -8,7 +8,7 @@ def get_groq():
         api_key=settings.GROQ_API_KEY,
         model_provider="groq",
         temperature=0.2,
-        max_tokens=4096,
+        max_tokens=25000,
         streaming=True,
         max_retries=4
     )

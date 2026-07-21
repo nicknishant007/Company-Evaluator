@@ -111,21 +111,17 @@ builder.add_edge(
     "financial_calculator"
 )
 
-builder.add_edge(
+"""builder.add_edge(
     "financial_calculator",
-    "finance"
-)
-builder.add_edge(
-    "data_collection",
-    "company"
-)
+   ["company", "finance","news"]
+)"""
+
+builder.add_edge("financial_calculator", "company")
+builder.add_edge("financial_calculator", "finance")
+builder.add_edge("financial_calculator", "news")
 
 builder.add_edge(
-    "data_collection",
-    "news"
-)
-builder.add_edge(
-    ["news","finance","company"],
+    ["company","finance","news"],
     "risk"
 )
 

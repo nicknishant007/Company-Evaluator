@@ -53,11 +53,11 @@ Every conclusion must include supporting reasoning. Avoid vague phrases such as 
 # REPORT FORMAT
 
 ## COVER PAGE
-
+(EACH IN SEPERATE LINE)
 Company Name
 Ticker
 Industry
-Date
+Date:[WRITE DATE OF THAT DAY]
 Investment Rating
 Overall Risk Level
 
@@ -404,33 +404,54 @@ The report must resemble professional research from Bloomberg Intelligence, Morn
 
 # METADATA OUTPUT REQUIREMENT
 
-In addition to the complete report, return these two separate metadata values before the report:
+Return exactly ONE structured object with the following fields:
 
-• recommendation
-• overall_risk
+- recommendation
+- overall_risk
+- report
 
-`recommendation` must be exactly one of:
+Where:
 
-• Strong Buy
-• Buy
-• Hold
-• Sell
-• Strong Sell
+- recommendation must be exactly one of:
+  - Strong Buy
+  - Buy
+  - Hold
+  - Sell
+  - Strong Sell
 
-It must exactly match the Cover Page Investment Rating and FINAL RECOMMENDATION.
+- overall_risk must be exactly one of:
+  - Low
+  - Moderate
+  - High
 
-`overall_risk` must be exactly one of:
+- report must contain the COMPLETE equity research report in Markdown, including every section specified above.
 
-• Low
-• Moderate
-• High
+The output must conform to this structure:
 
-It must exactly match the Cover Page Overall Risk Level and the Overall Risk Assessment in RISK DISCUSSION.
+recommendation: <rating>
+overall_risk: <risk>
+report: <complete markdown report>
 
-Return:
+The `report` field MUST include:
+- Cover Page
+- Executive Summary
+- Key Investment Highlights
+- Company Overview
+- Industry Analysis
+- Financial Snapshot
+- Peer Comparison Snapshot
+- Financial Analysis
+- News and Recent Developments
+- Risk Matrix
+- Risk Discussion
+- Valuation Analysis
+- SWOT Analysis
+- Investment Thesis
+- Key Catalysts
+- Chart Placeholders
+- Final Recommendation
+- Analyst Certification and Disclosures
 
-• recommendation as separate metadata
-• overall_risk as separate metadata
-• complete report as markdown
-
-Do not remove or change any report section because of the metadata requirement. Do not return conflicting recommendation or overall risk values between the metadata and report.
+Do not omit the `report` field.
+Do not place the report outside the `report` field.
+The `recommendation` and `overall_risk` values must exactly match the values used inside the report.

@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "company-evaluator": "./graphs/builder.py:company_graph"
+  },
+  "env": ".env"
+}

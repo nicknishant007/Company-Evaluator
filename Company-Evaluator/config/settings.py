@@ -17,6 +17,8 @@ class Settings(BaseSettings):
 
     DEFAULT_LLM: str = "mistral"
 
+    KIMI_MODEL:str="kimi-k2.6"
+
     QWEN_MODEL:str="qwen/qwen3-14b:free"
 
     OPENAI_MODEL: str = "gpt-4.1-mini"
@@ -34,6 +36,8 @@ class Settings(BaseSettings):
     LANGSMITH_PROJECT:str=""
 
     OPENAI_API_KEY: str = ""
+
+    KIMI_API_KEY:str=""
 
     MISTRAL_API_KEY: str = ""
 
